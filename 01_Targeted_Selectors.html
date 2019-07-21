@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,35 @@
   <title>Targeted Selectors</title>
 
   <style>
-  div p {
-    background: yellow;
-  }
+    /* Direct Child */
+    div > p {
+      background: yellow;
+    }
+
+    /* Directly After */
+    div + p {
+      background: palegreen;
+      color: red;
+    }
+
+    /* By Attribute */
+    a[target] {
+      background: saddlebrown;
+      color: #fff;
+    }
+
+    /* By Attribute
+    a[target='_blank'] {
+      background: #ff0000;
+      color: #fff;
+    } */
+
+    /* Spacific Attribute Values */
+    input[type='text'],
+    input[type='email'] {
+      width: 100%;
+      margin-bottom: 5px;
+    }
   </style>
 
 </head>
@@ -20,7 +47,9 @@
     <p>Lorem ipsum dolor sit amet consectetur.</p>
 
     <ul>
-      <li><p>item-1</p></li>
+      <li>
+        <p>item-1</p>
+      </li>
       <li>item</li>
       <li>item</li>
     </ul>
@@ -30,5 +59,18 @@
 
   <p>Lorem ipsum dolor sit amet.</p>
 
+  <a href="#">Page 1</a>
+  <a href="#" target="_self">Page 2</a>
+  <a href="https://google.com" target="_blank">Google</a>
+
+  <br><br>
+
+  <form>
+    <input type="text" placeholder="Name">
+    <input type="email" placeholder="Email">
+    <input type="submit" value="Submit">
+  </form>
+
 </body>
+
 </html>
