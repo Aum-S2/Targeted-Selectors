@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Box Shadow</title>
+
+  <style>
+    .container {
+      display: flex;
+    }
+
+    .box {
+      padding: 1rem;
+      margin: 1rem;
+      background: plum;
+      color: #fff;
+
+      /* offset-x | offset-y | color */
+      box-shadow: 9px 9px brown;
+
+      /* offset-x | offset-y | blur-radius | color */
+      box-shadow: 4px 4px 18px brown;
+
+      /* Negative Values */ 
+      box-shadow: -4px -4px 18px brown;
+
+      /* offset-x | offset-y | spread-radius | blur-radius | color */
+      box-shadow: 3px 3px 9px 1px rgba(0, 0, 0, 0.4);
+
+      /* inset | offset-x | offset-y | color */
+      box-shadow: inset 4px 4px yellow;
+
+      /* Multi shadows */
+      box-shadow: 4px 4px 9px yellow, -4px -4px 9px tomato;
+    }
+  </style>
+
+</head>
+
+
+<body>
+  <div class="container">
+
+    <div class="box">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque.</p>
+    </div>
+    
+    <div class="box">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque.</p>
+    </div>
+
+    <div class="box">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque.</p>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
