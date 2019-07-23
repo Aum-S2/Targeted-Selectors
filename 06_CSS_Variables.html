@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,53 @@
   <title>CSS Variables</title>
 
   <style>
-  
+    :root {
+      --max-width: 1100px;
+      --primary-color: yellowgreen;
+      --secondary-color: #7cfc00;
+      --light-color: #f4f4f4;
+    }
+
+    .box {
+      --box-1-width: 3;
+      --box-2-width: 1;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      box-lines: 1.42;
+      background: var(--light-color);
+    }
+
+    header {
+      background-color: var(--primary-color);
+      border-bottom: 3px solid var(--secondary-color);
+      color: #fff;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      margin: auto;
+      max-width: var(--max-width);
+    }
+
+    .box {
+      background-color: var(--primary-color);
+      border-bottom: 4px solid var(--secondary-color);
+      color: #fff;
+      padding: 1rem;
+      margin: 1rem;
+    }
+
+    .box-1 { flex: var(--box-1-width) }
+    .box-2 { flex: var(--box-2-width) }
+
   </style>
 
 </head>
@@ -17,5 +64,18 @@
   <header>
     <h1>CSS Variables</h1>
   </header>
+
+  <div class="container">
+    <div class="box box-1">
+      <h3>Heading</h3>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam culpa beatae, officia recusandae quae
+        numquam.</p>
+    </div>
+    <div class="box box-2">
+      <h3>HeadingII</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore similique ad eaque ab earum?</p>
+    </div>
+  </div>
 </body>
+
 </html>
