@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +11,30 @@
     body {
       background: indianred;
     }
+
+    .box {
+      background: papayawhip;
+      width: 200px;
+      height: 200px;
+      animation-name: animate01;
+      animation-duration: 2s;
+    }
+
+    @keyframes animate01 {
+      from {
+        width: 200px;
+      }
+
+      to {
+        width: 550px;
+      }
+    }
   </style>
 
 </head>
+
 <body>
   <div class="box"></div>
 </body>
+
 </html>
