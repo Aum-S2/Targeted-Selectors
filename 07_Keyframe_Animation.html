@@ -14,21 +14,28 @@
 
     .box {
       background: papayawhip;
+      position: relative;
       width: 200px;
       height: 200px;
-      animation-name: animate01;
-      animation-duration: 2s;
+      /* animation-name: animate01;
+      animation-duration: 2.5s;
       animation-iteration-count: 3;
+      animation-fill-mode: forwards;
+      animation-delay: 2.5s;
+      animation-direction: alternate-reverse;
+      animation-timing-function: ease-in-out; */
+      animation: animate01 2.5s 2 forwards 2.5s alternate-reverse ease-in-out;
     }
 
     @keyframes animate01 {
-      /* dont have to write it since we started from 200px / */
-      /* from {
-        width: 200px;
-      } */
+      from {
+        top: 0;
+      }
 
       to {
+        top: 250px;
         width: 550px;
+        background-color: violet;
       }
     }
   </style>
