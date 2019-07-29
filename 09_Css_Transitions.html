@@ -19,12 +19,19 @@
       background: violet;
       width: 100px;
       height: 100px;
-      transition-property: background;
-      transition-duration: 2s;
+      /* transition-property: background;
+      transition-duration: 2.5s;
+      transition-timing-function: ease-in-out;
+      transition-delay: 0.5s; */
+      /* transition: background, border-radius 2.5s ease-in-out 0.2s; */
+      transition: all 2.5s ease-in-out 0.2s;
     }
 
     .box:hover {
       background: red;
+      border-radius: 50%;
+      height: 256px;
+      width: 256px;;
     }
   </style>
 </head>
